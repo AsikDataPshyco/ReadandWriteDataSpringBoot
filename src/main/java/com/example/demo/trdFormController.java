@@ -15,19 +15,19 @@ public String tradesDetails() {
 	
 }
 
-@PostMapping("/viewTradeDetails")
+@PostMapping("/details")
 public String viewTrdDetails(
 		@RequestParam("trdid") String trdid , 
-		@RequestParam("secName") String SecName ,
-		@RequestParam("cusipId") String CusipID,
-		@RequestParam("trdamt") String TradeAmt, ModelMap modmap
+		@RequestParam("secName") String secName ,
+		@RequestParam("cusipId") String cusipId,
+		@RequestParam("trdAmt") String trdAmt, ModelMap modmap
 		)
 {
 	
 	modmap.put("trdid", trdid);
-	modmap.put("secName", SecName);
-	modmap.put("cusipId", CusipID);
-	modmap.put("trdamt", TradeAmt);
+	modmap.put("secName", secName);
+	modmap.put("cusipId", cusipId);
+	modmap.put("trdAmt", trdAmt);
 	
 	return "viewTradeDetails";
 }
